@@ -1,5 +1,5 @@
 from adapters.openai.gpt3 import GPT3Client
-from adapters.bookgenerator import BookGenerator
+from uses_cases.bookgenerator import BookGenerator
 from models.book import Book
 from configuration.properties import ORGANIZATION, API_KEY, TITLE, CHAPTERS, GENRE, SUMMARY
 

@@ -1,8 +1,8 @@
 import openai
-from uses_cases.interfaces.textgeneratei import TextGenerateI
+from uses_cases.interfaces.itextgenerate import ITextGenerate
 
 
-class GPT3Client(TextGenerateI):
+class GPT3Client(ITextGenerate):
 
     def __init__(self,
             organization: str,

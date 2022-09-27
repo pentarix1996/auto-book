@@ -1,15 +1,16 @@
-from uses_cases.interfaces.textgeneratei import TextGenerateI
+from uses_cases.interfaces.itextgenerate import ITextGenerate
 from models.book import Book
+
 
 class BookGenerator:
 
-    def __init__(self, engine: TextGenerateI, title: str, genre: str, chapters: int, summary: str = None) -> None:
+    def __init__(self, engine: ITextGenerate, title: str, genre: str, chapters: int, summary: str = None) -> None:
         self.engine = engine
         self.title = title
         self.genre = genre
         self.chapters = chapters
         self.summary = summary
-    
+
     def generate_book(self) -> Book:
         gpt_input = f"Escríbeme un libro de {self.genre.lower()}. El libro tendrá {self.chapters} capítulos de larga duración, el título del libro es '{self.title}'\n\n"
 
